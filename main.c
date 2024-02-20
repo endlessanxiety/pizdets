@@ -25,8 +25,8 @@ BOOL CALLBACK EnumWndProc(HWND hwnd, LPARAM lParam)
 
 int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR lpCmdLine, int nCmdShow)
 {
-    extern const char _binary_oe_bmp_start[];
-    BITMAPFILEHEADER *bfh = (BITMAPFILEHEADER *)_binary_oe_bmp_start;
+    extern const char _binary_el_bmp_start[];
+    BITMAPFILEHEADER *bfh = (BITMAPFILEHEADER *)_binary_el_bmp_start;
     BITMAPINFO *bmi = (BITMAPINFO *)(bfh + 1);
     void *ppv;
     HBITMAP hbm = CreateDIBSection(NULL, bmi, DIB_RGB_COLORS, &ppv, NULL, 0);

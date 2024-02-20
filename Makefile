@@ -8,5 +8,5 @@ clean:
 %.o: %.bmp
 	ld -r -b binary -o $@ $<
 
-%.exe: main.c oe.o
+%.exe: main.c el.o
 	gcc $^ -o $@ $(CFLAGS)
